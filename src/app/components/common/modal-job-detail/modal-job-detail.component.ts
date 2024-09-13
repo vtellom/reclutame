@@ -16,6 +16,7 @@ export class ModalJobDetailComponent implements OnInit {
   @Input() company: any;
   @Input() origen: any;
   @Input() email: any;
+  @Input() apply: any;
 
 
   constructor(

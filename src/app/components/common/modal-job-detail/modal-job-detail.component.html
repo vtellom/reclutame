@@ -35,7 +35,7 @@
                               </span>
                           </div>
                       </div>
-                      <div class="apply-btn" *ngIf="this.auth.currentUserValue.p_id_candidato">
+                      <div class="apply-btn" *ngIf="this.auth.currentUserValue.p_id_candidato && apply == 1">
                         <button class="default-btn" (click)="aplicarVacante()">
                             Apply
                         </button>

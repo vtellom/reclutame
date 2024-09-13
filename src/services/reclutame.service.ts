@@ -318,7 +318,7 @@ export class ReclutameService {
     }).toPromise();
   }
 
-  async registroResumenCS(objetivo: string, salarioActual: string, salarioEsperado: string, idTipoTrabajo: any, idCandidato: any): Promise<any> {
+  async registroResumenCS(objetivo: string, salarioActual: string, salarioEsperado: string, idTipoTrabajo: any, idCandidato: any, categoria: any): Promise<any> {
 
     return this.http.post<any>(this.apiUrl + 'registroResumenCS', {
       "p_objetivo": objetivo,
@@ -326,6 +326,7 @@ export class ReclutameService {
       "p_sueldo_esperado": parseFloat(salarioEsperado),
       "p_id_tipo_trabajo": parseInt(idTipoTrabajo),
       "p_id_candidato": parseInt(idCandidato),
+      "p_id_categoria": parseInt(categoria),
 
     }).toPromise();
   }
@@ -369,7 +370,7 @@ export class ReclutameService {
     return this.http.get<any>(this.apiUrl + 'getResumenEXP/' + idCandidato).toPromise();
   }
 
-  async updateResumenCS(objetivo: string, salarioActual: string, salarioEsperado: string, idTipoTrabajo: any, idCandidato: any, idResumenCarrera: any): Promise<any> {
+  async updateResumenCS(objetivo: string, salarioActual: string, salarioEsperado: string, idTipoTrabajo: any, idCandidato: any, idResumenCarrera: any, categoria: any): Promise<any> {
 
     return this.http.post<any>(this.apiUrl + 'updateResumenCS', {
       "p_id_resumen_carrera": parseInt(idResumenCarrera),
@@ -378,6 +379,7 @@ export class ReclutameService {
       "p_sueldo_esperado": parseFloat(salarioEsperado),
       "p_id_tipo_trabajo": parseInt(idTipoTrabajo),
       "p_id_candidato": parseInt(idCandidato),
+      "p_id_categoria": parseInt(categoria),
 
     }).toPromise();
   }

@@ -76,7 +76,7 @@ export class EdManageJobsComponent {
       'Application deadline date': item.fecha_limite_solicitud,
 
     }
-    this.openPopup();
+    this.openPopup(); 
     this.ref.detectChanges();
   }
 }
